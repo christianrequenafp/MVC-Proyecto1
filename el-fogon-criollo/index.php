@@ -1,4 +1,6 @@
 <?php
+
+include_once("controllers/productoController.php");
 include_once("config/parameters.php");
 
 if(!isset($_GET['controller'])){

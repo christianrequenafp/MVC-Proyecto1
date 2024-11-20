@@ -1,31 +1,31 @@
 /* Importo todas las tipografías que voy a usar */
 @font-face {
     font-family: 'tablet-gothic-regular';
-    src: url('E:/2024-2025/Proyecto-1/fonts/tablet-gothic/Tablet-Gothic-W02-Regular/Tablet-Gothic-W02-Regular.ttf') format('truetype');
+    src: url('../fonts/Tablet-Gothic-W02-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'tablet-gothic-semibold';
-    src: url('E:/2024-2025/Proyecto-1/fonts/tablet-gothic/Tablet-Gothic-W02-SemiBold/Tablet-Gothic-W02-SemiBold.ttf') format('truetype');
+    src: url('../fonts/Tablet-Gothic-W02-SemiBold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'tablet-gothic-bold';
-    src: url('E:/2024-2025/Proyecto-1/fonts/tablet-gothic/Tablet-Gothic-W02-Bold/Tablet-Gothic-W02-Bold.ttf') format('truetype');
+    src: url('../fonts/Tablet-Gothic-W02-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 @font-face {
     font-family: 'condor-condensed-regular';
-    src: url('E:/2024-2025/Proyecto-1/fonts/condor-condensed/fonts/fonnts.com-Condor_Regular.otf') format('opentype');
+    src: url('../fonts/fonnts.com-Condor_Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'condor-condensed-bold';
-    src: url('E:/2024-2025/Proyecto-1/fonts/condor-condensed/fonts/fonnts.com-Condor_Bold.otf') format('opentype');
+    src: url('../fonts/fonnts.com-Condor_Bold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
 }
@@ -104,8 +104,8 @@ th {
 }
 
 .carousel-item img {
-    width: calc(100% - 100px) !important;
-    height: 650px;
+    width: calc(100% - 120px) !important;
+    height: 625px;
     object-fit: cover; 
     object-position: center; 
 }
@@ -150,6 +150,10 @@ th {
     margin-top: 10px;
 }
 
+.flex-column{
+    margin-top: 100px;
+}
+
 .row .btn-warning {
     background-color: #d2a849;
     border: none;
@@ -158,7 +162,7 @@ th {
 }
 
 .btn-warning:hover {
-    background-color: #c4973c;
+    color: #FFF;
 }
 
 .custom-history-button {
@@ -212,7 +216,7 @@ th {
 
 /* Footer */
 footer {
-    background: url('E:/2024-2025/Proyecto-1/fotos/paisaje-footer.webp') no-repeat center center;
+    background: url('../images/paisaje-footer.webp') no-repeat center center;
     background-size: cover;
     padding: 40px 20px;
     text-align: center;

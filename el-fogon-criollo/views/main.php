@@ -18,7 +18,7 @@
         <div class="row align-items-center">
             <div class="col-md-4 d-flex justify-content-start ps-5">
                 <a href="#">
-                    <img class="logo" src="E:\2024-2025\Proyecto-1\fotos\Logo.png" alt="Imagen logo">
+                    <img class="logo" src="./assets/images/Logo.png" alt="Imagen logo">
                 </a>
             </div>
 
@@ -67,7 +67,7 @@
 <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="E:/2024-2025/Proyecto-1/fotos/Logo.png" alt="El Fogón Criollo">
+                <img src="./assets/images/Logo.png" alt="Logo El Fogon Criollo">
             </div>
             
             <div class="social-icons">
