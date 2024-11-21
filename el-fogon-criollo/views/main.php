@@ -17,16 +17,16 @@
     <div class="container-fluid py-3">
         <div class="row align-items-center">
             <div class="col-md-4 d-flex justify-content-start ps-5">
-                <a href="#">
+                <a href="?controller=producto&action=index">
                     <img class="logo" src="./assets/images/Logo.png" alt="Imagen logo">
                 </a>
             </div>
 
             <div class="col-md-8 d-flex flex-column align-items-end pe-5">
                 <div class="d-flex align-items-center">
-                    <a href="#" class="text-warning text-decoration-none me-3">Únete a nosotros</a>
+                    <a href="?controller=producto&action=joinUs" class="text-warning text-decoration-none me-3">Únete a nosotros</a>
                     <span class="text-white">|</span>
-                    <a href="#" class="text-warning text-decoration-none mx-3">Inicio de sesión</a>
+                    <a href="?controller=producto&action=logIn" class="text-warning text-decoration-none mx-3">Inicio de sesión</a>
                     <span class="text-white">|</span>
                     <button class="btn btn-link p-0 ms-3"><i class="fas fa-search lupa"></i></button>
                 </div>
@@ -34,16 +34,16 @@
                 <nav class="mt-3">
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link fw-bold" href="#">Nuestra carta</a>
+                            <a class="nav-link fw-bold" href="?controller=producto&action=ourCart">Nuestra carta</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-bold" href="#">Lo más destacado</a>
+                            <a class="nav-link fw-bold" href="?controller=producto&action=bestSeller">Lo más destacado</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-bold" href="#">Sobre nosotros</a>
+                            <a class="nav-link fw-bold" href="?controller=producto&action=aboutUs">Sobre nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-bold" href="#">Contacto</a>
+                            <a class="nav-link fw-bold" href="?controller=producto&action=contact">Contacto</a>
                         </li>
                         <li class="nav-item text-center">
                             <button class="btn btn-link text-white p-0"><i class="fas fa-shopping-cart"></i></button>
