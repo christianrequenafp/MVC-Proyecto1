@@ -72,6 +72,21 @@
     </section>
 
     <!-- Seccion 3 -->
+    <section class="seccion-kobe">
+        <div class="container d-flex align-items-center">
+            <div class="imagen-kobe">
+                <img src="./assets/images/carne-kobe.webp" alt="Carne Kobe" class="img-fluid">
+            </div>
+            <div class="texto-kobe">
+                <h5 class="categoria">CARNE PREMIUM</h5>
+                <h2>Carne Kobe, <br> una de las más exclusivas <br> y únicas del mundo</h2>
+                <p class="descripcion">
+                    Se llama buey de Kobe o ternera de Kobe a ciertos cortes de carne de ternera de ejemplares de la raza negra Tajima-ushi de vacuno Wagyu, criados de acuerdo a una estricta tradición en la prefectura de Hyogo (Japón).
+                </p>
+                <a href="#" id="section-3" class="btn">MIRA EL PRODUCTO</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Seccion 4 -->
 

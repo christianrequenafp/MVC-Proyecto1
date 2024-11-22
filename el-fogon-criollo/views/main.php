@@ -18,7 +18,7 @@
         <div class="row align-items-center">
             <div class="col-md-4 d-flex justify-content-start ps-5">
                 <a href="?controller=producto&action=index">
-                    <img class="logo" src="./assets/images/Logo.png" alt="Imagen logo">
+                    <img src="./assets/images/Logo.png" alt="Imagen logo">
                 </a>
             </div>
 
@@ -34,7 +34,7 @@
                 <nav class="mt-3">
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link fw-bold" href="?controller=producto&action=ourCart">Nuestra carta</a>
+                            <a class="nav-link fw-bold" href="#">Nuestra carta</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link fw-bold" href="?controller=producto&action=bestSeller">Lo más destacado</a>
@@ -67,7 +67,9 @@
 <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="./assets/images/Logo.png" alt="Logo El Fogon Criollo">
+                <a href="?controller=producto&action=index">
+                    <img src="./assets/images/Logo.png" alt="Logo El Fogon Criollo">
+                </a>
             </div>
             
             <div class="social-icons">
