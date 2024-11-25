@@ -59,6 +59,11 @@ h4 {
     font-size: 40px;
 }
 
+h5 {
+    font-family: 'Condor-condensed-regular', sans-serif;
+    font-size: 32px;
+}
+
 a {
     font-size: 18px;
     background-color: transparent;
@@ -401,4 +406,61 @@ footer .privacy-policy a:hover {
 
 .texto-kobe .btn:hover {
     color: #fff !important;
+}
+
+/* Section 4 */
+#section4 .d-flex{
+    justify-content: center;
+}
+
+.productos-destacados h2 {
+    font-family: 'condor-condensed-regular', sans-serif;
+    letter-spacing: 1.5px;
+    font-size: 40px;
+}
+
+.productos-destacados .btn-outline-warning {
+    border: 2px solid #ffc107;
+    color: #ffc107;
+    transition: all 0.3s ease;
+}
+
+.productos-destacados .btn-outline-warning:hover {
+    background-color: #ffc107;
+    color: #fff !important;
+}
+
+/* Carne argentina */
+#carneArgentina .row {
+    align-items: flex-start;
+}
+
+.carne-argentina {
+    font-family: 'tablet-gothic-regular', sans-serif;
+    color: white;
+}
+
+.carne-argentina h1 {
+    font-family: 'condor-condensed-regular', sans-serif;
+    font-size: 71.55px;
+}
+
+.carne-argentina h2 {
+    font-family: 'condor-condensed-regular', sans-serif;
+    font-size: 54px;
+}
+
+.image-container {
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.full-size {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

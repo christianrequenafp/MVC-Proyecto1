@@ -17,7 +17,7 @@
                       <div class="d-flex flex-column">
                         <div class="row">
                             <div class="col-6"><p class="text-warning">Ver todo</p></div>
-                            <div class="col-6 text-end"><a href="#" class="btn btn-warning rounded-pill px-4 py-2 text-end">CONOCER HISTORIA</a></div>
+                            <div class="col-6 text-end"><a href="?controller=producto&action=elaboracionCarne" class="btn btn-warning rounded-pill px-4 py-2 text-end">CONOCER HISTORIA</a></div>
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                         conoce un poco más<br>
                         sobre nuestro producto.
                     </h1>
-                    <a href="#" class="btn btn-outline-warning rounded-pill mt-4 px-4 py-2">Conoce más</a>
+                    <a href="?controller=producto&action=carneArgentina" class="btn btn-outline-warning rounded-pill mt-4 px-4 py-2">Conoce más</a>
                 </div>
             </div>
         </div>
@@ -89,6 +89,44 @@
     </section>
 
     <!-- Seccion 4 -->
+    <section class="productos-destacados py-5 bg-dark text-white">
+        <div id="section4" class="container">
+            <!-- Título y enlace Ver todo -->
+            <div class="d-flex align-items-center mb-4">
+                <h2>PRODUCTOS DESTACADOS</h2>
+            </div>
+            <!-- Productos -->
+            <div class="row">
+                <!-- Producto 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-dark border-0 text-center">
+                        <img src="./assets/images/products/costillar-black_angus-pd.webp" class="card-img-top" alt="Producto destacado 1">
+                        <div class="card-body">
+                            <a href="#" class="btn btn-outline-warning rounded-pill px-4">VER PRODUCTO</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-dark border-0 text-center">
+                        <img src="./assets/images/products/entrcot-wagyu_japones-pd.webp" class="card-img-top" alt="Producto 2">
+                        <div class="card-body">
+                            <a href="#" class="btn btn-outline-warning rounded-pill px-4">VER PRODUCTO</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-dark border-0 text-center">
+                        <img src="./assets/images/products/secreto-iberico-pd.webp" class="card-img-top" alt="Producto 3">
+                        <div class="card-body">
+                            <a href="#" class="btn btn-outline-warning rounded-pill px-4">VER PRODUCTO</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <!-- Bootstrap -->

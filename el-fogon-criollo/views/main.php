@@ -34,7 +34,7 @@
                 <nav class="mt-3">
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link fw-bold" href="#">Nuestra carta</a>
+                            <a class="nav-link fw-bold" href="?controller=producto&action=ourCart">Nuestra carta</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link fw-bold" href="?controller=producto&action=bestSeller">Lo más destacado</a>

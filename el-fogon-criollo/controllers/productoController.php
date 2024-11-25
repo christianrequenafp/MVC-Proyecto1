@@ -44,6 +44,14 @@ class productoController{
         include_once "views/main.php";
     }
 
-}
+    public function carneArgentina(){
+        $view = "views/users/history/carneArgentina.php";
+        include_once "views/main.php";
+    }
 
+    public function elaboracionCarne(){
+        $view = "views/users/history/elaboracionCarne.php";
+        include_once "views/main.php";
+    }
+}
 ?>
