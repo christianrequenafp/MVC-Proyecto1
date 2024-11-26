@@ -53,5 +53,11 @@ class productoController{
         $view = "views/users/history/elaboracionCarne.php";
         include_once "views/main.php";
     }
+
+    public function parrillaArgentina(){
+        $view = "views/users/history/parrillaArgentina.php";
+        include_once "views/main.php";
+    }
+
 }
 ?>

@@ -1,10 +1,9 @@
 <?php
-
 include_once("controllers/productoController.php");
 include_once("config/parameters.php");
 
 if(!isset($_GET['controller'])){
-    echo "No existe en la URL controller";
+    header("Location:". url ."?controller=producto");
 }else{
     $nombre_controller = $_GET['controller'].'Controller';
     if(class_exists($nombre_controller)){
