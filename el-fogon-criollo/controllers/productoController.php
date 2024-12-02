@@ -20,6 +20,8 @@ class productoController{
     }
 
     public function ourCart(){
+        $productos = Producto::getAll();
+        
         $view = "views/users/products/ourCart.php";
         include_once "views/main.php";
     }

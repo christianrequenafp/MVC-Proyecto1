@@ -1,5 +1,7 @@
 <?php
 
+include_once "./config/dataBase.php";
+
 abstract class Producto{
     protected $producto_id;
     protected $nombre;
@@ -7,12 +9,27 @@ abstract class Producto{
     protected $precio;
     protected $imagen;
 
-    public function __construct($producto_id, $nombre, $tipo, $precio, $imagen){
-        $this->producto_id = $producto_id;
-        $this->nombre = $nombre;
-        $this->tipo = $tipo;
-        $this->precio = $precio;
-        $this->imagen = $imagen;
+    public static function getAll(){
+        $conn = dataBase::connect();
+        $query = "SELECT producto_id, nombre, descripcion, tipo, precio, imagen FROM PRODUCTO";
+        $result = $conn->query($query);
+
+        $productos = [];
+        
+        if ($result && $result->num_rows > 0){
+            while ($row = $result->fetch_assoc()){
+                $productos [] = new static(
+                    $row['producto_id'], 
+                    $row['nombre'], 
+                    $row['tipo'], 
+                    $row['precio'], 
+                    $row['imagen']
+                );
+            }
+        }
+
+        $conn->close();
+        return $productos;
     }
 
     public function getProducto_id(){
