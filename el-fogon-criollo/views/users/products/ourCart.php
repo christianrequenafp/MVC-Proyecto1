@@ -13,7 +13,7 @@
         <?php if (!empty($productos)): ?>
             <?php foreach ($productos as $producto): ?>
                 <div class="producto-card">
-                    <img src="./assets/images/products/<?=$producto->getImagen()?>" alt="<?=$producto->getNombre()?>">
+                    <img src="./assets/images/products/<?=$producto->getImagen()?>" alt="<?=$producto->getNombre()?>" loading="lazy">
                     <h3><?=$producto->getNombre()?></h3>
                     <p><?=$producto->getTipo()?></p>
                     <p><strong>$<?= number_format($producto->getPrecio(), 2) ?></strong></p>
