@@ -20,6 +20,7 @@ class productoController{
     }
 
     public function ourCart(){
+        include_once "models/Producto.php";
         $productos = Producto::getAll();
         
         $view = "views/users/products/ourCart.php";

@@ -2,9 +2,10 @@
 
 include_once "./config/dataBase.php";
 
-abstract class Producto{
+class Producto{
     protected $producto_id;
     protected $nombre;
+    protected $descripcion;
     protected $tipo;
     protected $precio;
     protected $imagen;
@@ -18,13 +19,17 @@ abstract class Producto{
         
         if ($result && $result->num_rows > 0){
             while ($row = $result->fetch_assoc()){
-                $productos [] = new static(
-                    $row['producto_id'], 
-                    $row['nombre'], 
-                    $row['tipo'], 
-                    $row['precio'], 
-                    $row['imagen']
-                );
+
+                $producto = new Producto();
+
+                $producto->setProducto_id($row['producto_id']);
+                $producto->setNombre($row['nombre']);
+                $producto->setDescripcion($row['descripcion']);
+                $producto->setTipo($row['tipo']);
+                $producto->setPrecio($row['precio']);
+                $producto->setImagen($row['imagen']);
+
+                $productos[] = $producto;
             }
         }
 
@@ -78,6 +83,18 @@ abstract class Producto{
 
     public function setImagen($imagen){
         $this->imagen = $imagen;
+
+        return $this;
+    }
+
+    public function getDescripcion()
+    {
+        return $this->descripcion;
+    }
+
+    public function setDescripcion($descripcion)
+    {
+        $this->descripcion = $descripcion;
 
         return $this;
     }

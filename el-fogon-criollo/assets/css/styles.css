@@ -453,3 +453,35 @@ footer .privacy-policy a:hover {
     object-fit: cover;
 }
 
+/* Nuestros porductos */
+.card,h5 {
+    font-size: 26px;
+}
+
+.card,img {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+}
+
+.card-body {
+    background-color: #3C3B40;
+    color: lightgray !important;
+}
+
+.card-text {
+    color: lightgray !important;
+}
+
+.btn-primary {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: white;
+}
