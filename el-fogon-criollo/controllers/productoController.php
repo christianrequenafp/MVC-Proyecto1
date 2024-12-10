@@ -27,8 +27,21 @@ class productoController{
         include_once "views/main.php";
     }
 
-    public function bestSeller(){
-        $view = "views/users/products/bestSeller.php";
+    public function productDetails(){
+        include_once "models/Producto.php";
+
+        $producto_id = $_GET["id"] ?? null;
+
+        if ($producto_id){
+            $producto = Producto::getById($producto_id);
+            if(!$producto){
+                die("Producto no encontrado");
+            }
+        }else{
+            die("ID de producto no especificado");
+        }
+
+        $view = "views/users/products/productDetails.php";
         include_once "views/main.php";
     }
 

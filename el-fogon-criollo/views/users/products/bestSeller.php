@@ -1,1 +1,0 @@
-<h1>Lo más destacado</h1>

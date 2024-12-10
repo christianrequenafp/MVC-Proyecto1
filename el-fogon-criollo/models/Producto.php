@@ -37,6 +37,31 @@ class Producto{
         return $productos;
     }
 
+    public static function getById($id) {
+        $db = dataBase::connect();
+        $query = $db->prepare("SELECT * FROM PRODUCTO WHERE producto_id = ?");
+        $query->bind_param("i", $id);
+        $query->execute();
+        $result = $query->get_result();
+
+        if ($result->num_rows > 0) {
+            $producto_data = $result->fetch_assoc();
+
+            $producto = new Producto();
+
+            $producto->setProducto_id($producto_data['producto_id']);
+            $producto->setNombre($producto_data['nombre']);
+            $producto->setDescripcion($producto_data['descripcion']);
+            $producto->setTipo($producto_data['tipo']);
+            $producto->setPrecio($producto_data['precio']);
+            $producto->setImagen($producto_data['imagen']);
+            
+            return $producto;
+        }
+        return null;
+    }
+    
+
     public function getProducto_id(){
         return $this->producto_id;
     }

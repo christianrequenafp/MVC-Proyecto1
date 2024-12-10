@@ -37,9 +37,6 @@
                             <a class="nav-link fw-bold" href="?controller=producto&action=ourCart">Nuestra carta</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-bold" href="?controller=producto&action=bestSeller">Lo más destacado</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link fw-bold" href="?controller=producto&action=aboutUs">Sobre nosotros</a>
                         </li>
                         <li class="nav-item">

@@ -84,7 +84,7 @@
         <div id="section4" class="container">
             <!-- Título y enlace Ver todo -->
             <div class="d-flex align-items-center mb-4">
-                <h2>PRODUCTOS DESTACADOS</h2>
+                <h3>PRODUCTOS DESTACADOS</h3>
             </div>
             <!-- Productos -->
             <div class="row">
@@ -93,7 +93,7 @@
                     <div class="card bg-dark border-0 text-center">
                         <img src="./assets/images/products/costillar-black_angus-pd.webp" class="card-img-top" alt="Producto destacado 1">
                         <div class="card-body">
-                            <a href="#" class="btn btn-outline-warning rounded-pill px-4">VER PRODUCTO</a>
+                            <h5 class="text-white">COSTILLAR BLACK ANGUS</h5>
                         </div>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
                     <div class="card bg-dark border-0 text-center">
                         <img src="./assets/images/products/entrcot-wagyu_japones-pd.webp" class="card-img-top" alt="Producto 2">
                         <div class="card-body">
-                            <a href="#" class="btn btn-outline-warning rounded-pill px-4">VER PRODUCTO</a>
+                            <h5 class="text-white">ENTRECOT WAGYU JAPONÉS</h5>
                         </div>
                     </div>
                 </div>
@@ -111,7 +111,7 @@
                     <div class="card bg-dark border-0 text-center">
                         <img src="./assets/images/products/secreto-iberico-pd.webp" class="card-img-top" alt="Producto 3">
                         <div class="card-body">
-                            <a href="#" class="btn btn-outline-warning rounded-pill px-4">VER PRODUCTO</a>
+                            <h5 class="text-white">SECRETO IBÉRICO</h5>
                         </div>
                     </div>
                 </div>
