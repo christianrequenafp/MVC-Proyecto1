@@ -43,7 +43,9 @@
                             <a class="nav-link fw-bold" href="?controller=producto&action=contact">Contacto</a>
                         </li>
                         <li class="nav-item text-center">
-                            <button class="btn btn-link text-white p-0"><i class="fas fa-shopping-cart"></i></button>
+                            <a href="?controller=producto&action=cart">
+                                <button class="btn btn-link text-white p-0"><i class="fas fa-shopping-cart"></i></button>
+                            </a>
                         </li>
                     </ul>
                 </nav>

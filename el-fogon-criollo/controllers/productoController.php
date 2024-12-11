@@ -55,11 +55,6 @@ class productoController{
         include_once "views/main.php";
     }
 
-    public function cart(){
-        $view = "views/users/company/cart.php";
-        include_once "views/main.php";
-    }
-
     public function carneArgentina(){
         $view = "views/users/history/carneArgentina.php";
         include_once "views/main.php";
@@ -72,6 +67,11 @@ class productoController{
 
     public function parrillaArgentina(){
         $view = "views/users/history/parrillaArgentina.php";
+        include_once "views/main.php";
+    }
+
+    public function cart(){
+        $view = "views/users/products/cart.php";
         include_once "views/main.php";
     }
 
