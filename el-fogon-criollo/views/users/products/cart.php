@@ -14,7 +14,7 @@ $total = $subtotal + $envio + $impuestos;
 
 <div class="carrito-container">
     <h1>CARRITO</h1>
-    <form action="actualizar_carrito.php" method="POST">
+    <form action="?controller=carrito&action=updateCart" method="POST">
         <table class="carrito-tabla">
             <thead>
                 <tr>
@@ -39,7 +39,7 @@ $total = $subtotal + $envio + $impuestos;
                             </td>
                             <td><?=number_format($producto['precio'] * $producto['cantidad'], 2)?>€</td>
                             <td>
-                                <a href="eliminar_producto.php?id=<?=$id?>" class="btn-eliminar">X</a>
+                                <a href="?controller=carrito&action=removeFromCart&id=<?=$id?>" class="btn-eliminar">X</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

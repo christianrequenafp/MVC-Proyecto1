@@ -9,6 +9,8 @@
     <!-- Iconos de Bootstrap -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Favicon para el icono de arriba en la ventana del navegador -->
+    <link rel="icon" href="./assets/images/Logo.png" type="image/png">
     <!-- Este es mi kit donde tengo todos mis iconos, la página web se llama: "Font Awesome Docs" -->
     <script src="https://kit.fontawesome.com/246f3af3e1.js" crossorigin="anonymous"></script>
 </head>

@@ -29,7 +29,9 @@
                                 <h5 class="card-title"><?=$producto->getNombre()?></h5>
                                 <p class="card-text text-muted"><?=number_format($producto->getPrecio(), 2)?>€</p>
                             </div>
-                            <button class="btn btn-primary">Añadir al carrito</button>
+                            <button class="btn btn-primary">
+                                <a href="?controller=producto&action=addToCart&id=<?=$producto->getProducto_id()?>" style="color: white; text-decoration: none;">Añadir al carrito</a>
+                            </button>
                         </div>
                     </div>
                 <?php endforeach; ?>
