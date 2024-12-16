@@ -1,1 +1,1 @@
-<h1>Página: Únete a nosotros</h1>
+<h1>Página de registro</h1>

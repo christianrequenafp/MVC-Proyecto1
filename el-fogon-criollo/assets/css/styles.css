@@ -588,3 +588,87 @@ footer .privacy-policy a:hover {
     text-decoration: none;
     font-weight: bold;
 }
+
+/* Login & Register */
+.account-container{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 50px auto;
+    max-width: 900px;
+}
+
+.login-form, .register-form{
+    background-color: #1b232a;
+    padding: 30px;
+    border: 1px solid #2c3e50;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+label {
+    font-family: 'tablet-gothic-regular', sans-serif;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #dcb363;
+    display: block;
+}
+
+input[type="email"], input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #0f171d;
+    color: white;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="email"]:focus, input[type="password"]:focus{
+    outline: none;
+    border-color: #dcb363;
+}
+
+.submit-login{
+    width: 100%;
+    padding: 12px;
+    background-color: #dcb363;
+    border: none;
+    color: #0f171d;
+    font-family: 'tablet-gothic-semibold', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.submit-login:hover{
+    background-color: #e0a86c;
+    color: #0f171d;
+}
+
+.remember-me input[type="checkbox"]{
+    margin-right: 8px;
+}
+
+.form-links{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-links a{
+    color: #dcb363;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.form-links a:hover{
+    text-decoration: underline;
+    color: #e0a86c;
+}

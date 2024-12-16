@@ -3,32 +3,29 @@
 include_once "./config/dataBase.php";
 
 class UsuarioDAO {
-    private $conexion;
+    
+    private $db;
 
     public function __construct() {
-        $this->conexion = dataBase::connect();
+        $this->db = dataBase::connect();
     }
 
-    public function registrarUsuario($nombre, $email, $password) {
-        $passwordHash = password_hash($password, PASSWORD_BCRYPT);
-        $sql = "INSERT INTO usuarios (nombre, email, password) VALUES (?, ?, ?)";
-        $stmt = $this->conexion->prepare($sql);
-        $stmt->bind_param('sss', $nombre, $email, $passwordHash);
-        return $stmt->execute();
+    public function save(Usuario $usuario){
+        $query = $this->db->prepare("INSERT INTO usuario (nombre, email, contrasena) VALUES (?, ?, ?)");
+        $query->bind_param(
+            "sss",
+            $usuario->getNombre(),
+            $usuario->getEmail(),
+            $usuario->getPassword()
+        );
+
+        return $query->execute();
     }
 
-    public function autenticarUsuario($email, $password) {
-        $sql = "SELECT * FROM usuarios WHERE email = ?";
-        $stmt = $this->conexion->prepare($sql);
-        $stmt->bind_param('s', $email);
-        $stmt->execute();
-        $resultado = $stmt->get_result();
-        $usuario = $resultado->fetch_assoc();
-
-        if ($usuario && password_verify($password, $usuario['password'])) {
-            return $usuario;
-        }
-
-        return false;
+    public function findByEmail($email){
+        $query = $this->db->prepare("SELECT * FROM usuario WHERE email = ?");
+        $query->bind_param("s", $email);
+        $query->execute();
+        $return = $query->get_result()->fetch_assoc();
     }
 }
