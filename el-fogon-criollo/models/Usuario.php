@@ -5,6 +5,7 @@ class Usuario {
     private $nombre;
     private $email;
     private $password;
+    private $rol;
 
     public function getId() {
         return $this->id;
@@ -45,6 +46,15 @@ class Usuario {
 
         return $this;
     }
-    
+
+    public function getRol(){
+        return $this->rol;
+    }
+
+    public function setRol($rol){
+        $this->rol = $rol;
+
+        return $this;
+    }
 }
 ?>

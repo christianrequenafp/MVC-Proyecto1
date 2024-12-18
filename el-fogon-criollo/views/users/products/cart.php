@@ -1,16 +1,4 @@
-<?php
-session_start();
 
-$carrito = isset($_SESSION['carrito']) ? $_SESSION['carrito'] : [];
-
-$subtotal = 0;
-foreach ($carrito as $producto) {
-    $subtotal += $producto['precio'] * $producto['cantidad'];
-}
-$envio = 0; 
-$impuestos = 0;
-$total = $subtotal + $envio + $impuestos;
-?>
 
 <div class="carrito-container">
     <h1>CARRITO</h1>

@@ -47,12 +47,12 @@ class UsuarioController {
                 $resultado = $usuarioDAO->save($usuario);
 
                 if($resultado){
-                    header("Location: ?controller=usuario&action=register&success=1");
+                    echo "Usuario registrado correctamente";
                 }else{
-                    header("Location: ?controller=usuario&action=register&error=1");
+                    echo "Error: El correo ya existe.";
                 }
             }else{
-                header("Location: ?controller=usuario&action=register&error=2");
+                echo "Todos los campos son obligatorios.";
             }
         }
     }

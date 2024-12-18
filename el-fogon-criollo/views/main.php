@@ -45,7 +45,7 @@
                             <a class="nav-link fw-bold" href="?controller=producto&action=contact">Contacto</a>
                         </li>
                         <li class="nav-item text-center">
-                            <a href="?controller=producto&action=cart">
+                            <a href="?controller=carrito&action=viewCart">
                                 <button class="btn btn-link text-white p-0"><i class="fas fa-shopping-cart"></i></button>
                             </a>
                         </li>
@@ -60,7 +60,7 @@
     <?php
     include_once $view;
     ?>
-    
+
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

@@ -35,7 +35,7 @@
             </div>
             <!-- Slide 3 -->
             <div class="carousel-item">
-                <img src="./assets/images/carrusel-3-promocion-30.webp" class="d-block w-100" alt="Imagen 3">
+                <img src="./assets/images/carrusel-3-promocion-30.webp" class="d-block w-100" alt="Imagen 3 del carrusel">
                 <div class="carousel-caption d-none d-md-block custom-caption discount">
                     <h1 class="display-4 fw-bold text-center">OFERTA DE DESCUENTO SI <br> ERES NUEVO USUARIO</h1>                
                 </div>
@@ -91,7 +91,7 @@
                 <!-- Producto 1 -->
                 <div class="col-md-4 mb-4">
                     <div class="card bg-dark border-0 text-center">
-                        <img src="./assets/images/products/costillar-black_angus-pd.webp" class="card-img-top" alt="Producto destacado 1">
+                        <img src="./assets/images/products/costillar-black_angus-pd.webp" class="card-img-top" alt="Producto destacado - costillar black angus">
                         <div class="card-body">
                             <h5 class="text-white">COSTILLAR BLACK ANGUS</h5>
                         </div>
@@ -100,7 +100,7 @@
                 <!-- Producto 2 -->
                 <div class="col-md-4 mb-4">
                     <div class="card bg-dark border-0 text-center">
-                        <img src="./assets/images/products/entrcot-wagyu_japones-pd.webp" class="card-img-top" alt="Producto 2">
+                        <img src="./assets/images/products/entrcot-wagyu_japones-pd.webp" class="card-img-top" alt="Producto destacado - entrecot wagyu">
                         <div class="card-body">
                             <h5 class="text-white">ENTRECOT WAGYU JAPONÉS</h5>
                         </div>
@@ -109,7 +109,7 @@
                 <!-- Producto 3 -->
                 <div class="col-md-4 mb-4">
                     <div class="card bg-dark border-0 text-center">
-                        <img src="./assets/images/products/secreto-iberico-pd.webp" class="card-img-top" alt="Producto 3">
+                        <img src="./assets/images/products/secreto-iberico-pd.webp" class="card-img-top" alt="Producto destacado - secreto iberico">
                         <div class="card-body">
                             <h5 class="text-white">SECRETO IBÉRICO</h5>
                         </div>
