@@ -27,6 +27,7 @@ class UsuarioDAO {
         $query = $this->db->prepare("SELECT * FROM usuario WHERE email = ?");
         $query->bind_param("s", $email);
         $query->execute();
-        $return = $query->get_result()->fetch_assoc();
+        $result = $query->get_result();
+        return $result->fetch_assoc();
     }
 }

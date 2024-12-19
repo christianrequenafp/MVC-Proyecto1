@@ -30,7 +30,7 @@
                                 <p class="card-text text-muted"><?=number_format($producto->getPrecio(), 2)?>€</p>
                             </div>
                             <button class="btn btn-primary">
-                                <a href="?controller=carrito&action=addToCart&id=<?=$producto->getProducto_id()?>" style="color: white; text-decoration: none;">Añadir al carrito</a>
+                                <a href="?controller=carrito&action=addToCart&id=<?=$producto->getProducto_id()?>" style="color: black; text-decoration: none;">Añadir al carrito</a>
                             </button>
                         </div>
                     </div>

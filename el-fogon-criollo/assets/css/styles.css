@@ -462,16 +462,16 @@ footer .privacy-policy a:hover {
 }
 
 .btn-primary {
-    background-color: #ffc107;
-    border-color: #ffc107;
+    background-color: #dcb363;
+    border-color: #dcb363;
     color: black;
     transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #ffc107;
-    border-color: #ffc107;
-    color: white;
+    background-color: #e01717;
+    border-color: #dcb363;
+    color: black;
 }
 
 .hero-section {

@@ -17,16 +17,20 @@ class UsuarioController {
             if($email && $password){
                 $usuarioDAO = new UsuarioDAO();
                 $userData = $usuarioDAO->findByEmail($email);
+                var_dump($userData);
 
-                if($userData && password_verify($password, $userData["password"])){
+                if($userData && password_verify($password, $userData["contrasena"])){
                     session_start();
                     $_SESSION["user"] = $userData["nombre"];
-                    header("Location: ?controller=usuario&action=login&success=1");
+                    echo "Inicio de sesión completado con exito";
+                    // header("Location: ?controller=usuario&action=login&success=1");
                 }else{
-                    header("Location: ?controller=usuario&action=login&error=1");
+                    echo "Credenciales incorrectas";
+                    // header("Location: ?controller=usuario&action=login&error=1");
                 }
             }else{
-                header("Location: ?controller=usuario&action=login&error=2");
+                echo "Todos los campos son obligatorios";
+                // header("Location: ?controller=usuario&action=login&error=2");
             }
         }
     }

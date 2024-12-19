@@ -7,6 +7,8 @@ class Usuario {
     private $password;
     private $rol;
 
+    const DEFAULT_ROL = 'user';
+
     public function getId() {
         return $this->id;
     }
