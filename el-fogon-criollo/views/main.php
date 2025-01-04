@@ -1,3 +1,8 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,6 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Iconos de Bootstrap -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+    <!-- Archivo con los estilos CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <!-- Favicon para el icono de arriba en la ventana del navegador -->
     <link rel="icon" href="./assets/images/Logo.png" type="image/png">
@@ -26,9 +32,15 @@
 
             <div class="col-md-8 d-flex flex-column align-items-end pe-5">
                 <div class="d-flex align-items-center">
-                    <a href="?controller=producto&action=joinUs" class="text-warning text-decoration-none me-3">Únete a nosotros</a>
-                    <span class="text-white">|</span>
-                    <a href="?controller=producto&action=logIn" class="text-warning text-decoration-none mx-3">Inicio de sesión</a>
+                    <?php if (isset($_SESSION["user"])): ?>
+                        <a class="welcome-user text-decoration-none mx-3">Bienvenido, <?= htmlspecialchars($_SESSION["user"]); ?></a>
+                        <span class="text-white">|</span>
+                        <a href="?controller=usuario&action=logout" class="text-warning text-decoration-none mx-3">Cerrar sesión</a>
+                    <?php else: ?>
+                        <a href="?controller=producto&action=joinUs" class="text-warning text-decoration-none me-3">Únete a nosotros</a>
+                        <span class="text-white">|</span>
+                        <a href="?controller=producto&action=logIn" class="text-warning text-decoration-none mx-3">Inicio de sesión</a>
+                    <?php endif; ?>
                     <span class="text-white">|</span>
                     <button class="btn btn-link p-0 ms-3"><i class="fas fa-search lupa"></i></button>
                 </div>

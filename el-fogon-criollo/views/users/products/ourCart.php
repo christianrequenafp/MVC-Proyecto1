@@ -6,14 +6,14 @@
                 <img src="./assets/images/nuestra-carta-circular.webp" class="hero-image" alt="Carne cortando">
             </div>
         </div>
-        <div class="filter-container">
+        <!-- <div class="filter-container">
             <label for="filtro-categoria">Filtrar por:</label>
             <select id="filtro-categoria" name="categoria">
                 <option value="">Nombre</option>
                 <option value="">Tipo</option>
                 <option value="">Precio</option>
             </select>
-        </div>
+        </div> -->
     </div>
 
     <div id="ourCart" class="container my-5">
@@ -30,7 +30,7 @@
                                 <p class="card-text text-muted"><?=number_format($producto->getPrecio(), 2)?>€</p>
                             </div>
                             <button class="btn btn-primary">
-                                <a href="?controller=carrito&action=addToCart&id=<?=$producto->getProducto_id()?>" style="color: black; text-decoration: none;">Añadir al carrito</a>
+                                <a class="add-product" href="?controller=carrito&action=addToCart&id=<?=$producto->getProducto_id()?>">Añadir al carrito</a>
                             </button>
                         </div>
                     </div>

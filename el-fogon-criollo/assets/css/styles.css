@@ -107,6 +107,10 @@ header.p-3 {
     color: #dcb363;
 }
 
+.welcome-user {
+    color: #ffc107 !important;
+}
+
 /* Footer */
 footer {
     background: url('../images/paisaje-footer.webp') no-repeat center center;
@@ -462,16 +466,21 @@ footer .privacy-policy a:hover {
 }
 
 .btn-primary {
-    background-color: #dcb363;
-    border-color: #dcb363;
-    color: black;
-    transition: all 0.3s ease;
+    background-color: #dcb363 !important;
+    border-color: #dcb363 !important;
+    color: black !important;
+    transition: all 0.3s ease !important;
 }
 
 .btn-primary:hover {
-    background-color: #e01717;
-    border-color: #dcb363;
+    background-color: #d39313 !important;
+    border-color: #dcb363 !important;
+    color: black !important;
+}
+
+.add-product {
     color: black;
+    text-decoration: none;
 }
 
 .hero-section {
@@ -672,4 +681,10 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 .form-links a:hover{
     text-decoration: underline;
     color: #e0a86c;
+}
+
+/* Confirmacion */
+back-shop {
+    color: #dcb363;
+    text-decoration: none;
 }

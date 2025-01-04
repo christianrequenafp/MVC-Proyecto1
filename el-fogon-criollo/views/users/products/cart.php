@@ -1,5 +1,3 @@
-
-
 <div class="carrito-container">
     <h1>CARRITO</h1>
     <form action="?controller=carrito&action=updateCart" method="POST">
@@ -60,6 +58,8 @@
                 <td><strong><?=number_format($total, 2)?>€</strong></td>
             </tr>
         </table>
-        <a href="pago.php" class="btn-pago">PROCEDER AL PAGO</a>
+        <form method="post" action="?controller=carrito&action=checkout">
+            <button type="submit" class="btn btn-pago">Proceder al Pago</button>
+        </form>
     </div>
 </div>

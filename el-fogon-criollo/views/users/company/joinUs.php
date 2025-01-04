@@ -1,1 +1,1 @@
-<h1>Página de registro</h1>
+<h1>Pagina de registro</h1>

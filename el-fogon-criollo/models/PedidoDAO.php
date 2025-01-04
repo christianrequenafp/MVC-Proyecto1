@@ -10,16 +10,25 @@ class PedidoDAO {
     }
 
     public function crearPedido($datosPedido) {
-        $sql = "INSERT INTO pedidos (fecha, total, estado) VALUES (NOW(), ?, 'pendiente')";
+        $sql = "INSERT INTO PEDIDO (usuario_id, fecha, total, estado, metodo_pago, cupon_id) 
+                VALUES (?, NOW(), ?, 'Procesado', ?, ?)";
         $stmt = $this->conexion->prepare($sql);
-        $stmt->bind_param('d', $datosPedido['total']);
+    
+        $stmt->bind_param('idss', 
+            $datosPedido['usuario_id'], 
+            $datosPedido['total'], 
+            $datosPedido['metodo_pago'], 
+            $datosPedido['cupon_id']
+        );
         $stmt->execute();
-
-        return $this->conexion->insert_id;
+    
+        return $this->conexion->insert_id; // Devuelve el ID del pedido creado
     }
+    
+    
 
     public function agregarProductoAlPedido($pedidoId, $productoId, $cantidad) {
-        $sql = "INSERT INTO pedido_producto (pedido_id, producto_id, cantidad) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO PEDIDO_PRODUCTO (pedido_id, producto_id, cantidad) VALUES (?, ?, ?)";
         $stmt = $this->conexion->prepare($sql);
         $stmt->bind_param('iii', $pedidoId, $productoId, $cantidad);
         $stmt->execute();

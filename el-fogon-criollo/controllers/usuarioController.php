@@ -17,20 +17,21 @@ class UsuarioController {
             if($email && $password){
                 $usuarioDAO = new UsuarioDAO();
                 $userData = $usuarioDAO->findByEmail($email);
-                var_dump($userData);
 
                 if($userData && password_verify($password, $userData["contrasena"])){
-                    session_start();
+                    if (session_status() === PHP_SESSION_NONE) {
+                        session_start();
+                    }
                     $_SESSION["user"] = $userData["nombre"];
+                    $_SESSION["user_id"] = $userData["usuario_id"];
                     echo "Inicio de sesión completado con exito";
-                    // header("Location: ?controller=usuario&action=login&success=1");
+                    header("Location: ?controller=producto&action=index");
                 }else{
                     echo "Credenciales incorrectas";
                     // header("Location: ?controller=usuario&action=login&error=1");
                 }
             }else{
                 echo "Todos los campos son obligatorios";
-                // header("Location: ?controller=usuario&action=login&error=2");
             }
         }
     }
@@ -52,6 +53,7 @@ class UsuarioController {
 
                 if($resultado){
                     echo "Usuario registrado correctamente";
+                    header("Location: ?controller=producto&action=logIn");
                 }else{
                     echo "Error: El correo ya existe.";
                 }
@@ -60,5 +62,15 @@ class UsuarioController {
             }
         }
     }
+
+    public function logout(){
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+        session_destroy();
+        $view = "views/users/company/logIn.php";
+        include_once("views/main.php");
+        exit;
+    }    
    
 }

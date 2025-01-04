@@ -11,7 +11,7 @@ class UsuarioDAO {
     }
 
     public function save(Usuario $usuario){
-        $query = $this->db->prepare("INSERT INTO usuario (nombre, email, contrasena, rol) VALUES (?, ?, ?, ?)");
+        $query = $this->db->prepare("INSERT INTO USUARIO (nombre, email, contrasena, rol) VALUES (?, ?, ?, ?)");
         $query->bind_param(
             "ssss",
             $usuario->getNombre(),
@@ -19,12 +19,12 @@ class UsuarioDAO {
             $usuario->getPassword(),
             $usuario->getRol()
         );
-
+    
         return $query->execute();
     }
 
     public function findByEmail($email){
-        $query = $this->db->prepare("SELECT * FROM usuario WHERE email = ?");
+        $query = $this->db->prepare("SELECT * FROM USUARIO WHERE email = ?");
         $query->bind_param("s", $email);
         $query->execute();
         $result = $query->get_result();
