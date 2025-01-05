@@ -1,5 +1,6 @@
 <div id="product" class="container my-5">
     <div class="row">
+        <!-- Imagen del producto -->
         <div class="col-md-6">
             <img src="./assets/images/products/<?=$producto->getImagen()?>" alt="<?=$producto->getNombre()?>" class="img-fluid">
         </div>

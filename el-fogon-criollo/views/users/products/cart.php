@@ -1,9 +1,11 @@
 <div class="carrito-container">
     <h1>CARRITO</h1>
+    <!-- Formulario para actualizar las cantidades del carrito -->
     <form action="?controller=carrito&action=updateCart" method="POST">
         <table class="carrito-tabla">
             <thead>
                 <tr>
+                    <!-- Encabezados de la tabla del carrito -->
                     <th>Producto</th>
                     <th>Precio</th>
                     <th>Cantidad</th>
@@ -12,9 +14,12 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- Verifica si el carrito tiene productos -->
                 <?php if (!empty($carrito)): ?>
+                    <!-- Recorre los productos en el carrito -->
                     <?php foreach ($carrito as $id => $producto): ?>
                         <tr>
+                            <!-- Muestra el nombre y la imagen del producto -->
                             <td class="carrito-producto">
                                 <img src="<?=$producto['imagen']?>" alt="<?=$producto['nombre']?>" class="carrito-imagen">
                                 <?=$producto['nombre']?>
@@ -30,6 +35,7 @@
                         </tr>
                     <?php endforeach; ?>
                 <?php else: ?>
+                    <!-- Mensaje si el carrito está vacío -->
                     <tr>
                         <td colspan="5" style="text-align: center;">El carrito está vacío.</td>
                     </tr>
@@ -38,8 +44,10 @@
         </table>
         <button type="submit" class="btn-actualizar">ACTUALIZAR CARRITO</button>
     </form>
+
     <div class="carrito-total">
         <h2>TOTAL COMPRA</h2>
+        <!-- Tabla con los detalles del total de la compra -->
         <table class="total-tabla">
             <tr>
                 <td>Subtotal:</td>
@@ -58,6 +66,7 @@
                 <td><strong><?=number_format($total, 2)?>€</strong></td>
             </tr>
         </table>
+        <!-- Formulario para proceder al pago -->
         <form method="post" action="?controller=carrito&action=checkout">
             <button type="submit" class="btn btn-pago">Proceder al Pago</button>
         </form>

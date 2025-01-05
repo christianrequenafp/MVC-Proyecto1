@@ -4,10 +4,10 @@
 **El Fogón Criollo** es un sitio web de comercio electrónico enfocado en la venta de productos de alta calidad relacionados con carnes y gastronomía. Ofrece funcionalidades como carrito de compras, registro e inicio de sesión de usuarios, y una experiencia visual intuitiva.
 
 ## Funcionalidades Principales
-- **Carrito de Compras**: Agregar, actualizar y eliminar productos fácilmente.
-- **Registro e Inicio de Sesión**: Los usuarios pueden registrarse y acceder con nombre, email y contraseña.
-- **Vista Unificada de Autenticación**: Combina el registro e inicio de sesión en una misma página.
-- **Optimización de Imágenes**: Uso del formato **WEBP** para mejorar los tiempos de carga.
+- **Carrito de Compras**: Los usuarios pueden agregar, actualizar y eliminar productos de su carrito de compras de manera sencilla.
+- **Registro e Inicio de Sesión**: Los usuarios pueden registrarse con su nombre, correo electrónico y una contraseña segura.
+- **Vista Unificada de Autenticación**: La página de inicio de sesión y registro están juntas, lo que simplifica el uso para el usuario.
+- **Optimización de Imágenes**: Se utiliza el formato **WEBP** para imágenes, lo que mejora los tiempos de carga de la página y la experiencia del usuario.
 
 ## Estructura del Proyecto
 El proyecto sigue una estructura organizada para facilitar su escalabilidad y mantenimiento:
@@ -32,6 +32,7 @@ Asegúrate de tener los siguientes componentes instalados:
 - **Base de Datos**: MySQL/MariaDB
 
 ## Instalación
+Sigue estos pasos para instalar y configurar el proyecto en tu entorno local:
 1. Clona el repositorio:
    ```bash
    git clone https://github.com/usuario/el-fogon-criollo.git
@@ -51,4 +52,3 @@ Asegúrate de tener los siguientes componentes instalados:
 
 ## Seguridad
 - Las contraseñas se almacenan de forma segura utilizando `password_hash()` y `password_verify()`.
-- Todas las entradas de usuario son validadas y saneadas para prevenir ataques **XSS** e **inyección SQL**.

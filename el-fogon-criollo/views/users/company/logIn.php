@@ -1,5 +1,6 @@
 <div class="account-container">
     <div>
+        <!-- Formulario para Iniciar Sesión -->
         <h4>Inicio de sesión</h4>
         <form class="login-form" action="index.php?controller=usuario&action=doLogin" method="POST">
             <label for="email">Dirección de correo <span class="required">*</span></label>
@@ -14,6 +15,7 @@
     </div>
 
     <div>
+        <!-- Formulario para Regisrar un nuevo usuario -->
         <h4>Registro</h4>
         <form class="register-form" action="index.php?controller=usuario&action=saveUser" method="POST">
             <label for="register-name">Nombre <span class="required">*</span></label>

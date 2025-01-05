@@ -1,12 +1,14 @@
 <?php
 
 class Usuario {
+    // Propiedades privadas de la clase Usuario
     private $id;
     private $nombre;
     private $email;
     private $password;
     private $rol;
 
+    // Constante para el rol por defecto
     const DEFAULT_ROL = 'user';
 
     public function getId() {

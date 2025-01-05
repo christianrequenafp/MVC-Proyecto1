@@ -3,6 +3,7 @@
 include_once "./config/dataBase.php";
 
 class Producto{
+    // Variables de la clase Producto
     protected $producto_id;
     protected $nombre;
     protected $descripcion;
