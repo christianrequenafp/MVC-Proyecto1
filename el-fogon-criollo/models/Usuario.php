@@ -8,9 +8,6 @@ class Usuario {
     private $password;
     private $rol;
 
-    // Constante para el rol por defecto
-    const DEFAULT_ROL = 'user';
-
     public function getId() {
         return $this->id;
     }

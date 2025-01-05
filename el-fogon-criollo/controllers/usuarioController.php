@@ -30,12 +30,17 @@ class UsuarioController {
                     $_SESSION["user"] = $userData["nombre"];
                     $_SESSION["user_id"] = $userData["usuario_id"];
                     
+                    // Comprobar si el usuario es admin
+                    if ($userData["rol"] === "admin") {
+                        $_SESSION["admin"] = true;
+                    }
+
                     $pedidoDAO = new PedidoDAO();
-                    $ultimoPedido = $pedidoDAO->obtenerUltimoPedido($userData["usuario_id"]);
+                    $ultimoPedido = $pedidoDAO->getLastOrder($userData["usuario_id"]);
 
                     // Si existe un último pedido, recupera los productos de ese pedido
                     if ($ultimoPedido) {
-                        $productosPedido = $pedidoDAO->obtenerProductosPorPedido($ultimoPedido["pedido_id"]);
+                        $productosPedido = $pedidoDAO->getProductsPerOrder($ultimoPedido["pedido_id"]);
                         $_SESSION["carrito"] = [];
 
                         // Rellena el carrito con los productos del último pedido

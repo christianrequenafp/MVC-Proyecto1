@@ -135,7 +135,7 @@ class carritoController {
         $total = $subtotal + $envio + $impuestos;
     
         $pedidoDAO = new PedidoDAO();
-        $pedido_id = $pedidoDAO->crearPedido([
+        $pedido_id = $pedidoDAO->createOrder([
             'usuario_id' => $usuario_id,
             'total' => $total,
             'metodo_pago' => 'tarjeta',
@@ -148,7 +148,7 @@ class carritoController {
     
         // Inserta los productos del carrito en la base de datos
         foreach ($carrito as $producto) {
-            $pedidoDAO->agregarProductoAlPedido($pedido_id, $producto['id'], $producto['cantidad']);
+            $pedidoDAO->addProductToOrder($pedido_id, $producto['id'], $producto['cantidad']);
         }
     
         unset($_SESSION['carrito']);

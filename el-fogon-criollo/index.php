@@ -3,6 +3,7 @@
 include_once("controllers/productoController.php");
 include_once("controllers/carritoController.php");
 include_once("controllers/usuarioController.php");
+include_once("controllers/adminController.php");
 
 // Configuración general (URL base, acción por defecto, etc.)
 include_once("config/parameters.php");

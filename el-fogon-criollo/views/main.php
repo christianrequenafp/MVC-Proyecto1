@@ -30,8 +30,13 @@ if (session_status() === PHP_SESSION_NONE) {
                 <a href="?controller=producto&action=index">
                     <img src="./assets/images/Logo.png" alt="Imagen logo">
                 </a>
+                
+                <!-- Botón de acceso al Panel de Administrador visible solo si el usuario tiene rol "admin" -->
+                <?php if (isset($_SESSION["admin"]) && $_SESSION["admin"] === true): ?>
+                    <button class="admin-button"><a href="?controller=admin&action=index" class="text-decoration-none text-white">ACCEDER AL PANEL DE ADMINISTRADOR</a></button>
+                <?php endif; ?>
             </div>
-
+            
             <div class="col-md-8 d-flex flex-column align-items-end pe-5">
                 <div class="d-flex align-items-center">
                     <!-- Mensaje de bienvenida y enlaces según estado de la sesión -->
