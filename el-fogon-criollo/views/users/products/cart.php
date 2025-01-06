@@ -55,11 +55,15 @@
             </tr>
             <tr>
                 <td>Envío:</td>
-                <td><?=number_format($envio, 2)?>€</td>
+                <td>Envíos gratuitos!</td>
             </tr>
             <tr>
                 <td>Impuestos:</td>
-                <td><?=number_format($impuestos, 2)?>€</td>
+                <td>21 % del total</td>
+            </tr>
+            <tr>
+                <td></td>
+            <td><?=number_format($impuestos, 2)?>€</td>
             </tr>
             <tr>
                 <td><strong>Total:</strong></td>

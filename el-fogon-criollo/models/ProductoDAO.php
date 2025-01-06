@@ -40,6 +40,18 @@ class ProductoDAO {
 
         $conn->close();
         return $productos;
+
+        $sql = "SELECT * FROM PRODUCTO";
+        $result = $this->conexion->query($sql);
+
+        $productos = [];
+        
+        // Se procesan los resultados de la consulta y se almacenan en el array $pedidos
+        while ($fila = $result->fetch_assoc()) {
+            $productos[] = $fila;
+        }
+
+        return $produc;
     }
 
     // Método para obtener un producto por su ID
@@ -66,5 +78,20 @@ class ProductoDAO {
             return $producto;
         }
         return null;
+    }
+
+    // Metodo no estatico para mostrar los productos en el panel de admionistrador
+    public function getAllProducts(){
+        $sql = "SELECT * FROM PRODUCTO";
+        $result = $this->conexion->query($sql);
+
+        $productos = [];
+        
+        // Se procesan los resultados de la consulta y se almacenan en el array $pedidos
+        while ($fila = $result->fetch_assoc()) {
+            $productos[] = $fila;
+        }
+
+        return $productos;
     }
 }

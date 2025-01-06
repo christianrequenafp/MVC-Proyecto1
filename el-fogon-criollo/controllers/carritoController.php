@@ -67,8 +67,9 @@ class carritoController {
             $subtotal += $producto['precio'] * $producto['cantidad'];
         }
         $envio = 0;
-        $impuestos = 0;
-        $total = $subtotal + $envio + $impuestos;
+        $totalMenosIva = $subtotal / 1.21;
+        $impuestos = $subtotal - $totalMenosIva;
+        $total = $subtotal * 1.21;
     
         $view = "views/users/products/cart.php";
         include_once "views/main.php";
@@ -130,9 +131,7 @@ class carritoController {
         foreach ($carrito as $producto) {
             $subtotal += $producto['precio'] * $producto['cantidad'];
         }
-        $envio = 0;
-        $impuestos = 0;
-        $total = $subtotal + $envio + $impuestos;
+        $total = $subtotal * 1.21;
     
         $pedidoDAO = new PedidoDAO();
         $pedido_id = $pedidoDAO->createOrder([

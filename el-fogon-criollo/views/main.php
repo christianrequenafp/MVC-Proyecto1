@@ -33,7 +33,7 @@ if (session_status() === PHP_SESSION_NONE) {
                 
                 <!-- Botón de acceso al Panel de Administrador visible solo si el usuario tiene rol "admin" -->
                 <?php if (isset($_SESSION["admin"]) && $_SESSION["admin"] === true): ?>
-                    <button class="admin-button"><a href="?controller=admin&action=index" class="text-decoration-none text-white">ACCEDER AL PANEL DE ADMINISTRADOR</a></button>
+                    <button class="admin-button"><a href="?controller=api&action=index" class="text-decoration-none text-white">ACCEDER AL PANEL DE ADMINISTRADOR</a></button>
                 <?php endif; ?>
             </div>
             
